@@ -1,4 +1,4 @@
-package com.schedule.JavaJawn;
+package com.javajawn.JavaJawn;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
