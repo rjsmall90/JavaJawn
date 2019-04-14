@@ -2,6 +2,7 @@ package com.javajawn.JavaJawn.controller;
 
 import com.javajawn.JavaJawn.model.Admin;
 import com.javajawn.JavaJawn.service.AdminService;
+import com.javajawn.JavaJawn.service.EmployeeService;
 import org.hibernate.annotations.Cache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -19,9 +20,12 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
+    @Autowired
+    EmployeeService employeeService;
+
     @PostMapping(value = "/register")
     public ResponseEntity<Admin> registerUser(@RequestBody Admin newAdmin) {
-        HttpStatus status = HttpStatus.CONFLICT;
+        HttpStatus status = HttpStatus.PROCESSING;
         if (adminService.find(newAdmin) == null) {
             newAdmin = adminService.save(newAdmin);
             status = HttpStatus.CREATED;
