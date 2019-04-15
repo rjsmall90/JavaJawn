@@ -7,15 +7,15 @@ import java.util.List;
 @Table(name = "employee")
 public class Employee extends User {
 
-    @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long employeeId;
 
     private String username;
     private String password;
 
-    @ManyToOne
-    List<?> schedule;
+//    @ManyToOne
+//    List<?> schedule;
 
     public Long getEmployeeId() {
         return employeeId;
@@ -43,11 +43,11 @@ public class Employee extends User {
         this.getPassword();
     }
 
-    public List<?> getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(List<?> schedule) {
-        this.schedule = schedule;
-    }
+//    public List<?> getSchedule() {
+//        return schedule;
+//    }
+//
+//    public void setSchedule(List<?> schedule) {
+//        this.schedule = schedule;
+//    }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 @Table(name = "admin")
 public class Admin extends User {
 
-    @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long adminId;
 
