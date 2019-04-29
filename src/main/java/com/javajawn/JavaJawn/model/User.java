@@ -3,7 +3,8 @@ package com.javajawn.JavaJawn.model;
 import javax.persistence.*;
 
 @Entity
-abstract class User {
+@Table(name = "all_users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,12 +17,31 @@ abstract class User {
         return id;
     }
 
-    abstract void setId();
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public String getPassword() {
         return password;
     }
 
-    abstract void setPassword();
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

@@ -16,7 +16,7 @@ public class AdminService {
 
     public Admin save(Admin admin) { return adminRepo.saveAndFlush(admin); }
 
-    public Admin find(Admin admin) { return adminRepo.findById(admin.getAdminId()).get(); }
+    public Admin find(Admin admin) { return adminRepo.findById(admin.getId()).get(); }
 
     public List<Admin> findAll() { return adminRepo.findAll(); }
 

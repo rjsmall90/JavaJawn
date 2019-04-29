@@ -4,26 +4,12 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "employee")
 public class Employee extends User {
 
+    String username;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long employeeId;
+    public Employee(){
 
-    private String username;
-    private String password;
-
-//    @ManyToOne
-//    List<?> schedule;
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    @Override
-    void setId() {
-        this.getEmployeeId();
     }
 
     public String getUsername() {
@@ -33,21 +19,4 @@ public class Employee extends User {
     public void setUsername(String username) {
         this.username = username;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    void setPassword() {
-        this.getPassword();
-    }
-
-//    public List<?> getSchedule() {
-//        return schedule;
-//    }
-//
-//    public void setSchedule(List<?> schedule) {
-//        this.schedule = schedule;
-//    }
 }
